@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+set -ex
+
+command -v omz && omz update &
+command -v brew && brew update && brew upgrade && brew cleanup &
+command -v rustup && rustup update &
+wait
